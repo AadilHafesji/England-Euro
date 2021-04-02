@@ -50,31 +50,33 @@
         <div class="form-section">
           <form class="contact-form" id="contactForm" onkeyup="verify()" method="POST">
             <div class="dropdownSelect">
-              <select id="countrySupport" class="country-support">
-                <option value="" disabled selected="selected">What Country will you be supporting?</option>
+              <label for="countrySupport">What Country will you be supporting?</label>
+              <select id="countrySupport" class="country-support" name="select">
+                <option value="1">Country Support</option>
               </select>
 
-              <select id="otherCountry" class="other-country">
-                <option value="" disabled selected="selected">What other Country do you think may win?</option>
+              <label for="otherCountry">What other Country do you think may win?</label>
+              <select id="otherCountry" class="other-country" name="select">
+                <option value="1">Other Country</option>
               </select>
             </div>
 
-            <p>First Name<span class="required-star">*</span></p>
+            <label for="firstName">First Name<span class="required-star">*</span></label>
             <input type="text" id="firstName" name="firstName" required>
 
-            <p>Last Name<span class="required-star">*</span></p>
+            <label for="lastName">Last Name<span class="required-star">*</span></label>
             <input type="text" id="lastName" required>
 
-            <p>Email Address<span class="required-star">*</span></p>
+            <label for="emailAddress">Email Address<span class="required-star">*</span></label>
             <input type="email" id="emailAddress" required>
 
-            <p>Mobile Number</p>
+            <label for="mobileNumber">Mobile Number</label>
             <input type="tel" id="mobileNumber">
 
-            <p>Subject<span class="required-star">*</span></p>
+            <label for="subject">Subject<span class="required-star">*</span></label>
             <input type="text" id="subject" required>
 
-            <p>Description<span class="required-star">*</span></p>
+            <label for="description">Description<span class="required-star">*</span></label>
             <textarea name="user_message" id="description" required></textarea>
 
             <button type="submit" id="submitButton" class="blue-button" disabled>Send</button>
