@@ -1,0 +1,124 @@
+p {
+  margin: 0;
+}
+
+.planet {
+  border: 2px solid black;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  padding: 10px;
+  margin: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+}
+
+.planet:hover {
+  background: lightgrey;
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.planet-image {
+  max-width: 50%;
+  max-height: 100px;
+}
+
+.planet-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.planet-circumference,
+.planet-distance {
+  font-style: italic;
+}
+
+/* Exercise 1 styles */
+
+.planet-Mercury {
+  background: blue;
+}
+
+.planet-Mercury > a {
+  color: white;
+}
+
+.planet-Venus {
+  background: brown;
+}
+
+.planet-Earth {
+  background: green;
+}
+
+.planet-Mars {
+  background: red;
+}
+
+.planet-Jupiter {
+  background: black;
+  color: purple;
+}
+
+.planet-Saturn {
+  background: yellow;
+  border: 2px dashed green;
+}
+
+.planet-Uranus {
+  background: black;
+  color: white;
+  border: 3px solid red;
+}
+
+.planet-Neptune {
+  background: rgb(255, 0, 128);
+}
+
+/* Exercise 2 styles */
+
+.planet-mercury {
+  background: blue;
+}
+
+.planet-mercury > a {
+  color: white;
+}
+
+.planet-venus {
+  background: brown;
+}
+
+.planet-earth {
+  background: green;
+}
+
+.planet-mars {
+  background: red;
+}
+
+.planet-jupiter {
+  background: black;
+  color: purple;
+}
+
+.planet-saturn {
+  background: yellow;
+  border: 2px dashed green;
+}
+
+.planet-uranus {
+  background: black;
+  color: white;
+  border: 3px solid red;
+}
+
+.planet-neptune {
+  background: rgb(255, 0, 128);
+}

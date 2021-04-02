@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Top Scorers</title>
+    <link rel="stylesheet" href="week-9-exercise-3.css" />
+    
+    <script defer src="week-9-exercise-3.js"></script>
+  </head>
+
+  <body>
+    <h1>Top Premier League Scorers</h1>
+    <label>
+      Search players:
+      <input type="text" name="search" id="search" class="search" placeholder="Enter player name" onkeyup="findPlayer()"  />
+    </label>
+    <table>
+      <thead>
+        <tr>
+          <th>Player Name</th>
+          <th>Team</th>
+          <th>Position</th>
+          <th>Nationality</th>
+          <th>Goals Scored</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    
+  </body>
+</html>

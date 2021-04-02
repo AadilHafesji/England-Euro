@@ -1,0 +1,90 @@
+h2 {
+  margin-bottom: 50px;
+}
+
+/* some default styles for every paragraph - may be overridden below */
+p {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* borders */
+.border-1 {
+  border: 5px solid black;
+}
+
+.border-2 {
+  border: 10px dashed greenyellow;
+}
+
+.border-3 {
+  border-top-style: solid;
+  border-right-style: dashed;
+  border-bottom-style: groove;
+  border-left-style: ridge;
+
+  border-top-width: 10px;
+  border-right-width: 50px;
+  border-bottom-width: 20px;
+  border-left-width: 30px;
+
+  border-top-color: red;
+  border-right-color: blue;
+  border-bottom-color: black;
+  border-left-color: gray;
+}
+
+/* border-radius */
+.border-radius-1 {
+  border-radius: 15px;
+  border: 3px dotted blue;
+}
+
+.border-radius-2 {
+  border-radius: 20px;
+  border: 2px groove red;
+}
+
+.border-radius-3 {
+  border-radius: 250px 15px 55px 0px;
+}
+
+.border-radius-4 {
+  border-radius: 50%;
+}
+
+/* margin */
+.margin-1 {
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  margin-left: 40px;
+}
+
+.margin-2 {
+  margin: 90px 50px 90px 50px;
+}
+
+.margin-3 {
+  margin: 67px;
+}
+
+/* padding */
+.padding-1 {
+  padding: 45px;
+}
+
+.padding-2 {
+  padding: 80px 40px 80px 40px;
+}
+
+.padding-3 {
+  padding: 60px 20px 5px 10px;
+}
+
+/* centre-aligned content */
+.centre {
+  width: 50%;
+  margin: auto;
+}
