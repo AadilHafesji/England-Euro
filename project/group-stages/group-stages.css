@@ -400,6 +400,40 @@ table > tbody > tr > td {
   pointer-events: all;
 }
 
+@media screen and (max-width: 1315px) { 
+  .form-guide {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 15px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .croatia-form-guide {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 10px;
+  }
+
+  .czech-form-guide {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px;
+  }
+
+  .england-form-guide {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 10px;
+  }
+
+  .scotland-form-guide {
+    grid-column: 1;
+    grid-row: 4;
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .group-table {
     width: 90%;
@@ -432,36 +466,10 @@ table > tbody > tr > td {
   }
 
   .form-guide {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 15px;
+    width: 100%;
   }
 
-  .croatia-form-guide {
-    grid-column: 1;
-    grid-row: 1;
+  .croatia-form-guide, .czech-form-guide, .england-form-guide, .scotland-form-guide {
     width: 90%;
-    padding: 10px;
-  }
-
-  .czech-form-guide {
-    grid-column: 1;
-    grid-row: 2;
-    width: 90%;
-    padding: 10px;
-  }
-
-  .england-form-guide {
-    grid-column: 1;
-    grid-row: 3;
-    width: 90%;
-    padding: 10px;
-  }
-
-  .scotland-form-guide {
-    grid-column: 1;
-    grid-row: 4;
-    width: 90%;
-    padding: 10px;
   }
 }

@@ -153,32 +153,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, te
   color: #B3000F;
 }
 
-@media screen and (max-width: 800px) {
-  .contact-form {
-    width: 85%;
-  }
-
-  .dropdownSelect {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 5px;
-    margin-bottom: 10px;
-  }
-
-  .country-support, .other-country {
-    font-size: 12px;
-  }
-
-  input, textarea {
-    width: 100%!important;
-  }
-
+@media screen and (max-width: 1450px) {
   .wrap {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
   }
-  
+
   .our-information-wrap {
     grid-row: 1;
     grid-column: 1;
@@ -208,6 +188,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, te
     margin: 5px auto;
   }
 
+  input, textarea {
+    width: 100%!important;
+  }
+
   .form-section {
     grid-row: 2;
     grid-column: 1;
@@ -216,5 +200,23 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, te
 
   select {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-form {
+    width: 85%;
+  }
+
+  .dropdownSelect {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .country-support, .other-country {
+    font-size: 12px;
   }
 }
