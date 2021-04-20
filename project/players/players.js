@@ -28,30 +28,68 @@ midfielders.textContent = midfieldersHeading;
 var forwards = document.querySelector(".forwards-heading");
 forwards.textContent = forwardsHeading;
 
-// Personal API Key
-var apiKey = 'e15a88f2c93c40a6afe00e261a22ef75';
+// API Key 
+var apiKey = 'b90c3dfea1msh736c28e757556c9p13ac16jsnf8207deb75f7';
+var host = 'api-football-v1.p.rapidapi.com';
 
-function requestEnglandSquad() {
-  fetch('https://api.football-data.org/v2/teams/770', {
+var playerInfoTemplate = document.querySelector('#player-info').innerHTML;
+var renderPlayerInfo = Handlebars.compile(playerInfoTemplate);
+
+function requestSquad(team, season) {
+  fetch(`https://${host}/v3/players?team=${team}&season=${season}`, {
     headers: {
-      'X-Auth-Token': apiKey,
+      'x-rapidapi-key': apiKey,
+      'x-rapidapi-host': host
     }
   })
   .then((response) => response.json())
-  .then((data) => {
-    console.log('Data: ', data);
+  .then((data) => data.response.forEach(inputPlayers))
+  .catch((error) => console.error('Error:', error));
+}
 
-    // Use the data from API to fill in table
-    inputPlayers(data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
+function requestEnglandSquad() {
+  requestSquad(10, 2020);
 }
 
 function inputPlayers(data) {
-  // var squadGoalkeepers = document.querySelector(".goalkeepers");
-  // squadGoalkeepers.textContent = data.address;
+  console.log(data);
+  if (data.statistics[0].games.position == 'Goalkeeper') {
+    var players = document.querySelector(".goalkeepers");
+    var playerData = renderPlayerInfo(data.player);
+    players.append(document.createRange().createContextualFragment(playerData));
+  }
+
+  if (data.statistics[0].games.position == 'Defender') {
+    var players = document.querySelector(".defenders");
+    var playerData = renderPlayerInfo(data.player);
+    players.append(document.createRange().createContextualFragment(playerData));
+  }
+
+  if (data.statistics[0].games.position == 'Midfielder') {
+    var players = document.querySelector(".midfielders");
+    var playerData = renderPlayerInfo(data.player);
+    players.append(document.createRange().createContextualFragment(playerData));
+  }
+
+  if (data.statistics[0].games.position == 'Attacker') {
+    var players = document.querySelector(".forwards");
+    var playerData = renderPlayerInfo(data.player);
+    players.append(document.createRange().createContextualFragment(playerData));
+  }
+}
+
+function searchPlayers() {
+  var input = document.getElementById("playerSearch");
+  var filter = input.value.toLowerCase();
+  var nodes = document.getElementsByClassName('squad-players-details');
+
+  for (i = 0; i < nodes.length; i++) {
+    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+      nodes[i].style.display = "block";
+    } else {
+      nodes[i].style.display = "none";
+    }
+  }
 }
 
 // Update on page load

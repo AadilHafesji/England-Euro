@@ -12,6 +12,8 @@
 
     <script defer type="text/javascript" src="players.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
   </head>
 
   <body>
@@ -21,21 +23,50 @@
     <main>
       <h1>Meet the Players</h1>
       <div class="input-area">
-        <input placeholder="Search" type="text" class="player-search" id="playerSearch">
+        <input placeholder="Search" type="text" class="player-search" id="playerSearch" onkeyup="searchPlayers()">
       </div>
 
-      <div>
-        <h2 class="goalkeepers-heading"></h2>
-        <div class="goalkeepers" id="goalkeepers"></div>
+      <script id="player-info" type="text/x-handlebars-template">
+        <div class="squad-players-details">
+          <div class="player-image-wrapper">
+            <img src="{{photo}}" class="player-image" alt="Image of {{name}}" />
+          </div>
+          <div class="player-details">
+            <div class="row">
+              <p class="player-name"><strong>{{firstname}} {{lastname}}</strong></p>
+            </div>
+            <div class="row">
+              <p class="player-age">Age: {{age}}</p>
+            </div>
+            <div class="row">
+              <p class="player-height">Height: {{height}}</p>
+            </div>
+            <div class="row">
+              <p class="player-weight">Weight: {{weight}}</p>
+            </div>
+        </div>
+      </script>
 
-        <h2 class="defenders-heading"></h2>
-        <div class="defenders" id="defenders"></div>
+      <div class="squad-list">
+        <h2 class="goalkeepers-heading" id="goalkeepers"></h2>
+        <div class="squad-list">
+          <ul class="squad-players goalkeepers"></ul>
+        </div>
 
-        <h2 class="midfielders-heading"></h2>
-        <div class="midfielders" id="midfielders"></div>
+        <h2 class="defenders-heading" id="defenders"></h2>
+        <div class="squad-list">
+          <ul class="squad-players defenders"></ul>
+        </div>
 
-        <h2 class="forwards-heading"></h2>
-        <div class="forwards" id="forwards"></div>
+        <h2 class="midfielders-heading" id="midfielders"></h2>
+        <div class="squad-list">
+          <ul class="squad-players midfielders"></ul>
+        </div>
+
+        <h2 class="forwards-heading" id="attackers"></h2>
+        <div class="squad-list">
+          <ul class="squad-players forwards"></ul>
+        </div>
       </div>
     </main>
 
