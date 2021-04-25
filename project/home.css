@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 nav {
   background-color: #004170;
 }
@@ -336,6 +340,7 @@ footer {
   width: 30px;
 }
 
+/* Ipad Horizontal view */
 @media screen and (max-width: 1024px) {
   main {
     display: grid;
@@ -369,7 +374,80 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) {
+/* Ipad Landscape view */
+@media screen and (max-width: 770px) {
+  .swiper-container {
+    width: 650px;
+    height: 350px;
+    margin: 30px auto;
+  }
+
+  .images-in-carosel {
+    width: 650px;
+    height: 350px;
+  }
+
+  .pre-footer {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 0px;
+  }
+
+  .fa-image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .players-button {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+  }
+
+  .store-button {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+
+  .top-of-page {
+    margin-left: auto;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 400px) {
+  nav {
+    position: relative;
+  }
+
+  nav .nav-bar {
+    display: none;
+  }
+
+  nav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+  }
+
+  .hamburger-icon {
+    width: 40px;
+  }
+
+  /* Don't show dropdown when in mobile view */
+  .dropdown {
+    display: none;
+  }
+
   main {
     display: grid;
     grid-template-columns: auto;
@@ -407,32 +485,5 @@ footer {
   iframe {
     width: 300px;
     height: 170px;
-  }
-
-  .pre-footer {
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto;
-    margin-bottom: 0px;
-  }
-
-  .fa-image {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .players-button {
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
-  }
-
-  .store-button {
-    grid-column: 1;
-    grid-row: 3;
-    width: 100%;
-  }
-
-  .top-of-page {
-    margin-left: auto;
   }
 }

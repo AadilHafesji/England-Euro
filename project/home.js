@@ -1,6 +1,3 @@
-// Creating Cookies
-Cookies.set('name', 'value', { expires: 7 });
-
 function backToTop() {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 }

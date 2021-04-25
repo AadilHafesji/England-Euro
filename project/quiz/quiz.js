@@ -1,6 +1,7 @@
 // Get the navigation bar from the Home page
 // Get the footer from the Home page
-$('#navBar').load('../home.html #navBar');
+$('#hamburgerMenu').load('../home.html #hamburgerMenu');
+$('#nav').load('../home.html #navBar');
 $('#footer').load('../home.html footer#footer');
 
 // position is the position of where the user in the test or which question they're on

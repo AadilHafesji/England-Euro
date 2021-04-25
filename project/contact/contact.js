@@ -1,6 +1,7 @@
 // Get the navigation bar from the Home page
 // Get the footer from the Home page
-$('#navBar').load('../home.html #navBar');
+$('#hamburgerMenu').load('../home.html #hamburgerMenu');
+$('#nav').load('../home.html #navBar');
 $('#footer').load('../home.html footer#footer');
 
 var text = "When and where is it, who's playing who, how will it work and how can you be there?" + " <br> " + "The objective of this website is for you find out more information about the England football teams journey to the UEFA Euro Championships.";
@@ -20,9 +21,9 @@ var user = [
   description = ""
 ]
 
+var button = document.getElementById("submitButton");
+
 function verify() {
-  var button = document.getElementById("submitButton");
-  
   user.countrySelectedOne = document.querySelector("#countrySupport").value;
   user.countrySelectedTwo = document.querySelector("#otherCountry").value;
   user.firstName = document.querySelector("#firstName").value;
@@ -31,7 +32,7 @@ function verify() {
   user.mobileNumber = document.querySelector("#mobileNumber").value;
   user.subject = document.querySelector("#subject").value;
   user.description = document.querySelector("#description").value;
-
+  
   if (user.firstName === "") {
     button.disabled = true;
   } else if (user.lastName === "") {
@@ -45,6 +46,19 @@ function verify() {
   } else {
     button.disabled = false;
   }
+}
+
+function alertUser() {
+  JSAlert.confirm("Your message has been Sent.").then(function(result) {
+    // Check if pressed Ok
+    if (!result) {
+      return;
+    }
+    // User pressed Ok!
+    // Reload page
+    console.log("Submit: " + user);
+    window.location.reload();
+  });
 }
 
 // Function to prevent users from selecting duplicate options from dropdown

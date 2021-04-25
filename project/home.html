@@ -10,16 +10,19 @@
     <link rel="stylesheet" href="home.css">
 
     <script defer type="text/javascript" src="home.js"></script>
+    <script defer type="text/javascript" src="/project/mobile-nav.js"></script>
 
     <!-- Carousel 3rd Party -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-
-    <!-- Cookies -->
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   </head>
 
   <body>
+    <!-- Hamburger Menu (Only for mobile view) -->
+    <a class="hamburger-menu" onclick="myFunction()">
+      <img src="/project/images/square.svg" class="hamburger-icon" id="hamburgerMenu"></i>
+    </a>
+
     <!-- Navigation Bar -->
     <nav>
       <ul id="navBar" class="nav-bar">
@@ -65,25 +68,25 @@
             <!-- Slides -->
             <div class="swiper-slide">
               <a href="https://www.uefa.com/uefaeuro-2020/news/0257-0e1a8373cbb3-5f5cd6c3cfe8-1000--group-d-guide/?iv=true">
-                <img src="../project/images/group-d.png" alt="Group D Table" class="parallax-bg images-in-carosel">
+                <img src="/project/images/group-d.png" alt="Group D Table" class="parallax-bg images-in-carosel">
               </a>
               <div class="title" data-swiper-parallax="-300">Group D Table</div>
             </div>
             <div class="swiper-slide">
               <a href="https://www.uefa.com/uefaeuro-2020/match/2024461--england-vs-scotland/prematch/background/?iv=true">
-                <img src="../project/images/england-v-scotland.jpg" alt="England vs Scotland" class="parallax-bg images-in-carosel">
+                <img src="/project/images/england-v-scotland.jpg" alt="England vs Scotland" class="parallax-bg images-in-carosel">
               </a>
               <div class="title" data-swiper-parallax="-300">England vs Scotland</div>
             </div>
             <div class="swiper-slide">
               <a href="https://www.uefa.com/uefaeuro-2020/match/2024451--england-vs-croatia/prematch/background/?iv=true">
-                <img src="../project/images/england-v-croatia.webp" alt="England vs Croatia" class="parallax-bg images-in-carosel">
+                <img src="/project/images/england-v-croatia.webp" alt="England vs Croatia" class="parallax-bg images-in-carosel">
               </a>
               <div class="title" data-swiper-parallax="-300">England vs Croatia</div>
             </div>
             <div class="swiper-slide">
               <a href="https://www.uefa.com/uefaeuro-2020/match/2024471--czech-republic-vs-england/prematch/background/?iv=true">
-                <img src="../project/images/england-v-czech-republic.webp" alt="England vs Czech Republic" class="parallax-bg images-in-carosel">
+                <img src="/project/images/england-v-czech-republic.webp" alt="England vs Czech Republic" class="parallax-bg images-in-carosel">
               </a>
               <div class="title" data-swiper-parallax="-300">England vs Czech Republic</div>
             </div>
@@ -133,9 +136,9 @@
     </div>
 
     <div class="pre-footer">
-      <img src="../project/images/the-fa.jpg" class="fa-image" alt="FA Badge">
+      <img src="/project/images/the-fa.jpg" class="fa-image" alt="FA Badge">
       <div class="players-button">
-        <a href="../project/players/players.html">Meet the Players</a>
+        <a href="/project/players/players.html">Meet the Players</a>
       </div>
       <div class="store-button">
         <a href="https://www.englandstore.com/en/?_s=bm-FI-PSC-FA-Desktop-MensSeniorHP-NavLink---">England Store</a>

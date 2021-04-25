@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="players.css">
     <link rel="stylesheet" href="/project/home.css">
 
+    <script defer type="text/javascript" src="/project/mobile-nav.js"></script>
+
     <script defer type="text/javascript" src="players.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -17,8 +19,11 @@
   </head>
 
   <body>
+    <!-- Hamburger Menu (Only for mobile view) -->
+    <a class="hamburger-menu" id="hamburgerMenu" onclick="myFunction()"></a>
+    
     <!-- Navigation Bar -->
-    <nav id="navBar"></nav>
+    <nav id="nav"></nav>
     
     <main>
       <h1>Meet the Players</h1>
