@@ -238,6 +238,7 @@ for (i = 0; i < accordionHD.length; i++) {
   accordionHD[i].addEventListener('click', toggleItem, false);
 }
 
+// Function to open and close the form guide
 function toggleItem() {
   var itemClass = this.parentNode.className;
   for (i = 0; i < accordionItem.length; i++) {
@@ -250,11 +251,13 @@ function toggleItem() {
 }
 
 // Modal
+// Fetch data from the JSON file
 fetch('group-stages-teams.json')
   .then((response) => response.json())
   .then((data) => {
     console.log('Data: ', data);
 
+    // For the data get the needed data and place in correct class name
     for(var x = 0; x < data.length; x++) {
       const titleTeamName = document.querySelectorAll(".title");
       data.forEach((item, i) => titleTeamName[i].textContent = item.teamName);
@@ -304,12 +307,14 @@ closeModalAnchor.forEach(anchor => {
   })
 });
 
+// Function to open modal
 function openModal(modal) {
   if (modal == null) return;
   modal.classList.add('active');
   overlay.classList.add('active');
 }
 
+// Function to close modal
 function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove('active');

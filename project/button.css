@@ -1,3 +1,6 @@
+/* Buttons that will be used in different HTML pages */
+/* Can be called from JavaScript as well */
+
 .red-button {
   display: block;
   margin: auto;

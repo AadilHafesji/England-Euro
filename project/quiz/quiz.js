@@ -110,6 +110,7 @@ function renderQuestion() {
     return false;
   }
 
+  // Get the status of what question the user is on
   get("testStatus").innerHTML = "Question " + (position + 1) + " of " + questions.length;
 
   question = questions[position].question;
@@ -159,14 +160,20 @@ function checkAnswer() {
   renderQuestion();
 }
 
+// Submit email function when button is clicked
 function submitEmail() {
   checkedbox = document.getElementById("checkedbox");
   email = document.querySelector("#emailAddress").value;;
 
+  // Check IF the checkbox is checked
   if (checkedbox.checked) {
     console.log("Checked");
   } 
   
+  // IF checkbox is checked and email is empty then show failed message
+  // Else If email is not empty and checkbox is not checked then show failed message
+  // Else If checkbox is checked and email is not empty the show success message
+  // Else show failed message
   if (checkedbox.checked && email == "") {
     console.log("No Email");
     JSAlert.alert("<code>Please enter your email.</code>", null, JSAlert.Icons.Failed);

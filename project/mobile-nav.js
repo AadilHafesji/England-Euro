@@ -1,4 +1,4 @@
-function myFunction() {
+function showHamburgerMenu() {
   var x = document.getElementById("navBar");
   if (x.style.display === "block") {
     x.style.display = "none";
