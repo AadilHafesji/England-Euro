@@ -99,7 +99,7 @@ function renderQuestion() {
                             </p>
                             <input id="checkedbox" type="checkbox" class="checkbox" />
                             <input type='email' placeholder='Enter Email' id='emailAddress' class="email-input" required>
-                            <button onclick='submitEmail()' class='submit-email-button blue-button'>Submit</button>
+                            <button method='post' onsubmit='return submitEmail(this)' onclick='submitEmail()' class='submit-email-button blue-button'>Submit</button>
                           `;
 
     // Resets the variable
@@ -163,15 +163,19 @@ function checkAnswer() {
 // Submit email function when button is clicked
 function submitEmail() {
   checkedbox = document.getElementById("checkedbox");
-  email = document.querySelector("#emailAddress").value;;
+  email = document.querySelector("#emailAddress").value;
+
+  // Regular Expression for email
+  var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   // Check IF the checkbox is checked
   if (checkedbox.checked) {
     console.log("Checked");
-  } 
+  }
   
   // IF checkbox is checked and email is empty then show failed message
   // Else If email is not empty and checkbox is not checked then show failed message
+  // Else If email is not in correct format and email is not empty then show a warning message
   // Else If checkbox is checked and email is not empty the show success message
   // Else show failed message
   if (checkedbox.checked && email == "") {
@@ -180,6 +184,9 @@ function submitEmail() {
   } else if (email != "" && !checkedbox.checked) {
     console.log("No Check");
     JSAlert.alert("<code>Please check the checkbox.</code>", null, JSAlert.Icons.Failed);
+  } else if (!re.test(email) && email != "") {
+    JSAlert.alert("<code>Email not in correct format.</code>", null, JSAlert.Icons.Warning);
+    return false;
   } else if (checkedbox.checked && email != "") {
     JSAlert.confirm("Email has been Sent.").then(function(result) {
       // Check if pressed Ok

@@ -61,11 +61,11 @@
         </div>
         
         <div class="form-section">
-          <form class="contact-form" id="contactForm" onkeyup="verify()" method="POST">
+          <div class="contact-form" id="contactForm" onkeyup="verifyForm()" method="POST">
             <div class="dropdownSelect">
               <label for="countrySupport">What Country will you be supporting?</label>
               <select id="countrySupport" class="country-support" name="select">
-                <option selected disabled>Country Support</option>
+                <option selected disabled value="0">Country Support</option>
               </select>
 
               <label for="otherCountry">What other Country do you think may win?</label>
@@ -92,8 +92,8 @@
             <label for="description">Description<span class="required-star">*</span></label>
             <textarea name="user_message" id="description" required></textarea>
 
-            <button type="submit" id="submitButton" class="blue-button" disabled>Send</button>
-          </form>
+            <button type="submit" id="submitButton" class="blue-button" disabled onclick="alertUser()">Send</button>
+          </div>
         </div>
       </div>
     </main>

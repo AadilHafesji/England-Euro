@@ -293,7 +293,27 @@ h2 {
   padding: 91px;
 }
 
-.players-button:hover, .store-button:hover {
+.players-button:hover > a {
+  color: #0491F2;
+  font-weight: bold;
+}
+
+.players-button:hover {
+  background-image: url('../project/images/England.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #FFF;
+  box-shadow: 1px 1px #0491F2,
+              2px 2px #0491F2,
+              3px 3px #0491F2,
+              4px 4px #0491F2,
+              5px 5px #0491F2;
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
+}
+
+.store-button:hover {
   background: #FF404F;
   border: 2px solid #FF404F;
   box-shadow: 1px 1px #0491F2,
@@ -307,6 +327,7 @@ h2 {
 
 .top-of-page {
   width: fit-content;
+  width: -moz-max-content;
   margin: auto;
   margin-left: 94%;
   justify-content: flex-end;
