@@ -56,7 +56,8 @@ function requestEnglandSquad() {
 
 // Function to place players under the correct headings
 function inputPlayers(data) {
-  console.log(data);
+  // console.log(data);
+
   // If the data response has Goalkeepers then place them with the HTML that has the class .goalkeepers
   // And render their information from the response of data.player
   // Then add the needed data to the HTML

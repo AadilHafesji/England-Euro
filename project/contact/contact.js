@@ -78,7 +78,7 @@ function requestCountries() {
   })
   .then((response) => response.json())
   .then((data) => {
-    console.log('Data: ', data);
+    // console.log('Data: ', data);
     countriesArray(data);
   })
   .catch((error) => {

@@ -146,7 +146,7 @@ function checkAnswer() {
     // Each time there is a correct answer this value increases
     correctAnswer++;
   } else if (answerChoice != questions[position].answer) {
-    console.log("Incorrect");
+    // console.log("Incorrect");
   }
   
   if (document.querySelectorAll('input[type="radio"]:checked').length === 0) {
@@ -179,10 +179,10 @@ function submitEmail() {
   // Else If checkbox is checked and email is not empty the show success message
   // Else show failed message
   if (checkedbox.checked && email == "") {
-    console.log("No Email");
+    // console.log("No Email");
     JSAlert.alert("<code>Please enter your email.</code>", null, JSAlert.Icons.Failed);
   } else if (email != "" && !checkedbox.checked) {
-    console.log("No Check");
+    // console.log("No Check");
     JSAlert.alert("<code>Please check the checkbox.</code>", null, JSAlert.Icons.Failed);
   } else if (!re.test(email) && email != "") {
     JSAlert.alert("<code>Email not in correct format.</code>", null, JSAlert.Icons.Warning);

@@ -50,3 +50,7 @@ window.twttr = (function (d, s, id) {
   console.log(t);
   return t;
 }(document, "script", "twitter-wjs"));
+
+// HTML Text in Console
+console.log('%c Welcome to my website', ' color: #FFF; font-size: 28px;');
+console.log('%c Hope you enjoy', ' color: #FFAA0C; font-size:20px;');
